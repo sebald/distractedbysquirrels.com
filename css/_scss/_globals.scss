@@ -1,0 +1,38 @@
+// GOBALS
+// -------------------------
+
+// Brand
+$brandColor: 				#409ad5;
+$brandAlternateColor: 		#2980b9;
+
+$brandAccentColor: 			#20638f;
+$brandAlternateAccentColor: #1b557a;
+
+
+// Fonts
+$serifFontFamily: 			'Crimson Text', Georgia, 'Times New Roman', serif;
+$sansFontFamily: 			'Montserrat', sans-serif;
+$codeFontFamily:   			Consolas, Monaco, 'Andale Mono', monospace;
+
+
+// Body
+$bodyColor:					#444;
+$bodyFontFamily: 			$serifFontFamily;
+$bodyFontSize:				100%;
+$bodyFontWeight:			400;
+$bodyLineHeight: 			1.6;
+
+$bodyBackground: 			#fff;
+
+
+// Typography
+$linkColor: 				$brandAlternateColor;
+$linkHoverColor: 			$brandColor;
+
+$selectionColor:			#ffe58b;
+
+
+// Breakpoint (for mixins/breakpoint)
+$breakpointTiny: 			450;
+$breakpointSmall: 			600;
+$breakpointNormal: 			1000;

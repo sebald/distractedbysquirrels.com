@@ -1,0 +1,5 @@
+name: Distracted by Squirrels
+markdown: redcarpet
+include: [.htaccess]
+
+permalink: /:categories/:title.html

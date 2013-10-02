@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('../fonts/crimson-roman.eot');
+    src: url('../fonts/crimson-roman.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/crimson-roman.woff') format('woff'),
+         url('../fonts/crimson-roman.ttf') format('truetype'),
+         url('../fonts/crimson-roman.svg#Crimson Text') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('../fonts/crimson-italic.eot');
+    src: url('../fonts/crimson-italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/crimson-italic.woff') format('woff'),
+         url('../fonts/crimson-italic.ttf') format('truetype'),
+         url('../fonts/crimson-italic.svg#Crimson Text') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}

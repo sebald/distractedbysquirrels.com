@@ -1,0 +1,29 @@
+*,
+*:after,
+*:before {
+	@include box-sizing(border-box);
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	color: $bodyColor;
+	font: $bodyFontWeight $bodyFontSize / #{$bodyLineHeight} $bodyFontFamily;
+	background-color: $bodyBackground;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+::-moz-selection {
+    background: $selectionColor;
+    text-shadow: none;
+}
+::selection {
+    background: $selectionColor;
+    text-shadow: none;
+}
