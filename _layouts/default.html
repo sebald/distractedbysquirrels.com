@@ -29,7 +29,33 @@
 	</head>
 	<body>
 
+		<header class="Header u-cf">
+			<a class="Logo" href="/">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 233 167" enable-background="new 0 0 233 167" xml:space="preserve">
+					<g>
+						<polygon fill="#1B557A" points="143.5,164 118.5,167 113.5,145 139.5,144"/>
+						<polygon fill="#2980B9" points="118.5,167 194.5,128 65.5,93"/>
+						<polygon fill="#20638F" points="194.5,128 58.5,123 197.5,96"/>
+						<polygon fill="#409AD5" points="0.5,45 58.5,123 225.5,113 231.5,1"/>
+					</g>
+				</svg>
+				<span>Distracted by Squirrels</span>
+			</a>
+			<a class="Menu-toggle" id="#menu-toggle" href="#menu"><i class="icon-menu"></i> Menu</a>
+			<nav class="Menu" id="#menu" role="navigation">
+				<ul>
+					<li><a href="/blog/">Blog</a></li>
+					<li><a href="/work/">Work</a></li>
+					<li><a href="/about/">About</a></li>
+				</ul>
+			</nav>
+		</header>
+
 		{{ content }}
 
+		<!--[if lte IE 9]>
+			<script src="/js/ie.js"></script>
+		<![endif]-->
+		<script src="/js/main.js"></script>
 	</body>
 </html>

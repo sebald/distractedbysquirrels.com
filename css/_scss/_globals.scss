@@ -32,6 +32,16 @@ $linkHoverColor: 			$brandColor;
 $selectionColor:			#ffe58b;
 
 
+// Logo
+$logoRatio: 0.725;
+
+$tinyLogoWidth: 60;
+$tinyLogoHeight: $logoRatio * $tinyLogoWidth;
+
+$smallLogoWidth: 100;
+$smallLogoHeight: $logoRatio * $smallLogoWidth;
+
+
 // Breakpoint (for mixins/breakpoint)
 $breakpointTiny: 			450;
 $breakpointSmall: 			600;

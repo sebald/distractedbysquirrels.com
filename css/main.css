@@ -1,3 +1,11 @@
+.u-cf:before,
+.u-cf:after {
+  content: '';
+  display: table; }
+
+.u-cf:after {
+  clear: both; }
+
 /*! normalize.css v1.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -541,3 +549,43 @@ a {
     color: #409ad5; }
   a:focus {
     outline: none; }
+
+.Logo,
+.Logo svg {
+  width: 3.75em;
+  height: 2.71875em; }
+
+.Logo {
+  display: block;
+  float: left; }
+  .Logo span {
+    color: transparent;
+    font: 0/0 a;
+    text-shadow: none; }
+
+.Header {
+  display: block;
+  margin: 0 auto;
+  width: 96%;
+  padding: 0.625em 0;
+  font-family: "Montserrat", sans-serif; }
+
+.Menu {
+  clear: both;
+  -webkit-transition: max-height 0.3s ease-out, background 0.3s ease-out;
+  -moz-transition: max-height 0.3s ease-out, background 0.3s ease-out;
+  transition: max-height 0.3s ease-out, background 0.3s ease-out; }
+  .js .Menu {
+    overflow: hidden;
+    max-height: 0; }
+
+.Menu-toggle {
+  float: right;
+  display: block;
+  color: #444444;
+  font-size: 1em;
+  line-height: 2.71875em;
+  text-transform: uppercase;
+  height: 2.71875em;
+  padding: 0 0.3125em;
+  outline: none; }

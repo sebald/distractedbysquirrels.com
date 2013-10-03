@@ -3,4 +3,10 @@
 @import "bourbon/bourbon";
 @import "mixins/all";
 
+@import "utils/utils-layout";
+
 @import "common/all";
+
+@import "components/Logo";
+@import "components/Header";
+@import "components/Menu";

@@ -1,0 +1,33 @@
+// Menu (top drawer)
+// -------------------------
+.Menu {
+	clear: both;
+
+	@include transition( max-height 0.3s ease-out, background 0.3s ease-out );
+
+	// Hide (only if JS is enabled)
+	.js & {
+		overflow: hidden;
+		max-height: 0;
+	}
+}
+
+// Menu toggle
+// -------------------------
+$menuToggleFontSize: 16;
+
+.Menu-toggle {
+	float: right;
+	display: block;
+
+	color: $bodyColor;
+	font-size: em($menuToggleFontSize);
+	line-height: em($tinyLogoHeight, $menuToggleFontSize);
+	text-transform: uppercase;
+
+	height: em($tinyLogoHeight, $menuToggleFontSize);
+
+	padding: 0 em(5);
+
+	outline: none;
+}

@@ -1,0 +1,14 @@
+.Logo,
+.Logo svg {
+	width: em($tinyLogoWidth);
+	height: em($tinyLogoHeight);
+}
+
+.Logo {
+	display: block;
+	float: left;
+
+	span {
+		@include hide-text;
+	}
+}
