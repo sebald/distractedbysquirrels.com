@@ -1,0 +1,8 @@
+// Show or hide elements base on display size (tiny, small, normal)
+// -------------------------
+
+.u-show-tiny {
+	@include breakpoint(tiny) {
+		display: none;
+	}
+}

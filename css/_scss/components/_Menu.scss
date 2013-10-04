@@ -3,12 +3,32 @@
 .Menu {
 	clear: both;
 
-	@include transition( max-height 0.3s ease-out, background 0.3s ease-out );
+	@include transition( max-height 0.3s ease-out, padding-top 0.3s ease-out );
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li a {
+		display: block;
+
+		margin: em(2) em(2) 0;
+		padding: em(12);
+
+		color: #fff;
+		background: $bodyColor;
+	}
 
 	// Hide (only if JS is enabled)
 	.js & {
 		overflow: hidden;
 		max-height: 0;
+	}
+
+	&.js-is-active {
+		max-height: em(217);
+		padding-top: em(10);
 	}
 }
 

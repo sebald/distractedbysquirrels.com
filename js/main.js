@@ -33,7 +33,7 @@
 
 	on( menuLinkElement, 'click', function ( e ) {
 		e.preventDefault();
-		menuElement.classList.toggle('is-active');
+		menuElement.classList.toggle('js-is-active');
 	});
 
 })( window, document );
