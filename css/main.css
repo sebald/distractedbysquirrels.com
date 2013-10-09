@@ -556,8 +556,8 @@ a {
 
 .Logo,
 .Logo svg {
-  width: 3.125em;
-  height: 2.26563em; }
+  width: 2.5em;
+  height: 1.8125em; }
 
 .Logo {
   display: block;
@@ -570,38 +570,98 @@ a {
 .Header {
   display: block;
   margin: 0 auto;
-  width: 96%;
-  padding: 0.625em 0;
+  width: 100%;
+  padding: 0 0 0.5em;
   font-family: "Montserrat", sans-serif; }
+  .Header > .Logo {
+    margin-top: 0.5em;
+    margin-left: 0.5em; }
+  .Header .Menu-toggle {
+    height: 2.3125em;
+    margin-right: 0.5em; }
+  .Header .Menu-icon {
+    margin-top: 2px; }
 
-.Menu {
-  clear: both;
-  -webkit-transition: max-height 0.3s ease-out, padding-top 0.3s ease-out;
-  -moz-transition: max-height 0.3s ease-out, padding-top 0.3s ease-out;
-  transition: max-height 0.3s ease-out, padding-top 0.3s ease-out; }
-  .Menu ul {
-    margin: 0;
-    padding: 0; }
-  .Menu li a {
-    display: block;
-    margin: 0.125em 0.125em 0;
-    padding: 0.75em;
-    color: #fff;
-    background: #444444; }
-  .js .Menu {
+.Menu ul {
+  margin: 0;
+  padding: 0;
+  -webkit-transition: max-height 0.3s ease-out;
+  -moz-transition: max-height 0.3s ease-out;
+  transition: max-height 0.3s ease-out; }
+  .js .Menu ul {
     overflow: hidden;
     max-height: 0; }
-  .Menu.js-is-active {
-    max-height: 13.5625em;
-    padding-top: 0.625em; }
+.Menu.js-is-open ul {
+  max-height: 13.5625em; }
+.Menu li a {
+  display: block;
+  padding: 0.75em;
+  background: #dddddd; }
 
 .Menu-toggle {
   float: right;
   display: block;
   color: #444444;
-  font-size: 1em;
-  line-height: 2.26563em;
+  line-height: 1.8125em;
   text-transform: uppercase;
-  height: 2.26563em;
-  padding: 0 0.3125em;
+  height: 1.8125em;
+  padding: 0 0.5em;
   outline: none; }
+  .Menu-toggle.with-Menu-icon {
+    position: relative;
+    width: 1.625em;
+    padding: 0; }
+  .js-is-open .Menu-toggle {
+    background: #dddddd; }
+
+.Menu-icon {
+  position: absolute;
+  display: block;
+  left: 0%;
+  top: 50%;
+  width: 100%;
+  height: 3px;
+  margin-top: -1.5px;
+  background: #999999;
+  border-radius: 3px;
+  font-size: 0;
+  -webkit-transition: background 0.1s ease;
+  -moz-transition: background 0.1s ease;
+  transition: background 0.1s ease; }
+  .Menu-icon:before, .Menu-icon:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #999999;
+    border-radius: 3px;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    transition: transform 0.3s ease; }
+  .Menu-icon:before {
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    -o-transform: translateY(-6px);
+    transform: translateY(-6px); }
+  .Menu-icon:after {
+    -webkit-transform: translateY(6px);
+    -moz-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    -o-transform: translateY(6px);
+    transform: translateY(6px); }
+  .js-is-open .Menu-icon {
+    background: transparent; }
+    .js-is-open .Menu-icon:before {
+      -webkit-transform: translateY(0px) rotate(45deg);
+      -moz-transform: translateY(0px) rotate(45deg);
+      -ms-transform: translateY(0px) rotate(45deg);
+      -o-transform: translateY(0px) rotate(45deg);
+      transform: translateY(0px) rotate(45deg); }
+    .js-is-open .Menu-icon:after {
+      -webkit-transform: translateY(0px) rotate(-45deg);
+      -moz-transform: translateY(0px) rotate(-45deg);
+      -ms-transform: translateY(0px) rotate(-45deg);
+      -o-transform: translateY(0px) rotate(-45deg);
+      transform: translateY(0px) rotate(-45deg); }

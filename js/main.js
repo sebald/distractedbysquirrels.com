@@ -29,11 +29,11 @@
 	// Responsive Navigation
 	// -------------------------
 	var menuElement = document.getElementById('menu'),
-		menuLinkElement = document.getElementById('menu-toggle');
+		menuLinkElement = document.getElementById('js-menu-toggle');
 
 	on( menuLinkElement, 'click', function ( e ) {
 		e.preventDefault();
-		menuElement.classList.toggle('js-is-active');
+		menuElement.classList.toggle('js-is-open');
 	});
 
 })( window, document );

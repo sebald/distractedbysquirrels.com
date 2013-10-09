@@ -1,53 +1,115 @@
 // Menu (top drawer)
 // -------------------------
-.Menu {
-	clear: both;
+$menuBackground: #ddd;
 
-	@include transition( max-height 0.3s ease-out, padding-top 0.3s ease-out );
+.Menu {
 
 	ul {
 		margin: 0;
 		padding: 0;
+
+		@include transition( max-height 0.3s ease-out );
+
+		// Hide (only if JS is enabled)
+		.js & {
+			overflow: hidden;
+			max-height: 0;
+		}
+	}
+
+	&.js-is-open ul {
+		max-height: em(217);
 	}
 
 	li a {
 		display: block;
 
-		margin: em(2) em(2) 0;
 		padding: em(12);
 
-		color: #fff;
-		background: $bodyColor;
-	}
-
-	// Hide (only if JS is enabled)
-	.js & {
-		overflow: hidden;
-		max-height: 0;
-	}
-
-	&.js-is-active {
-		max-height: em(217);
-		padding-top: em(10);
+		background: $menuBackground;
 	}
 }
 
 // Menu toggle
 // -------------------------
-$menuToggleFontSize: 16;
-
 .Menu-toggle {
 	float: right;
 	display: block;
 
 	color: $bodyColor;
-	font-size: em($menuToggleFontSize);
-	line-height: em($tinyLogoHeight, $menuToggleFontSize);
+	line-height: em($tinyLogoHeight);
 	text-transform: uppercase;
 
-	height: em($tinyLogoHeight, $menuToggleFontSize);
+	height: em($tinyLogoHeight);
 
-	padding: 0 em(5);
+	padding: 0 em(8);
 
 	outline: none;
+
+	&.with-Menu-icon {
+		position: relative;
+		width: em(26);
+		padding: 0;
+	}
+
+	.js-is-open & {
+		background: $menuBackground;
+	}
+}
+
+$menuIconColor: #999;
+$menuIconHeight: 3px;
+$menuIconSpace: 6px;
+$menuIconWidth: 100%;
+.Menu-icon {
+	position: absolute;
+	display: block;
+	left: (100 - $menuIconWidth)/2;
+	top: 50%;
+
+	width: $menuIconWidth;
+	height: $menuIconHeight;
+	margin-top: -($menuIconHeight/2);
+
+	background: $menuIconColor;
+	border-radius: $menuIconHeight;
+
+	font-size: 0;
+
+	@include transition(background 0.1s ease);
+
+	&:before,
+	&:after {
+		position: absolute;
+		content: '';
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+
+		background: $menuIconColor;
+		border-radius: $menuIconHeight;
+
+		@include transition(transform 0.3s ease);
+	}
+
+	&:before {
+		@include transform(translateY(-$menuIconSpace));
+	}
+
+	&:after {
+		@include transform(translateY($menuIconSpace));
+	}
+
+	.js-is-open & {
+		background: transparent;
+
+		&:before {
+			@include transform(translateY(0px) rotate(45deg));
+		}
+
+		&:after {
+			@include transform(translateY(0px) rotate(-45deg));
+		}
+	}
 }

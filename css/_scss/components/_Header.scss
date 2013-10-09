@@ -1,9 +1,25 @@
+$headerVerticalSpace: 8;
+
 .Header {
 	display: block;
 	margin: 0 auto;
-	width: 96%;
+	width: 100%;
 
-	padding: em(10) 0;
+	padding: 0 0 em($headerVerticalSpace);
 
 	font-family: $sansFontFamily;
+
+	> .Logo {
+		margin-top: em($headerVerticalSpace);
+		margin-left: em(8);
+	}
+
+	.Menu-toggle {
+		height: em($tinyLogoHeight + $headerVerticalSpace);
+		margin-right: em(8);
+	}
+
+	.Menu-icon {
+		margin-top: 2px;
+	}
 }

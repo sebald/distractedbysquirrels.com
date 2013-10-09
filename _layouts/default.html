@@ -30,6 +30,17 @@
 	<body>
 
 		<header class="Header u-cf">
+			<nav class="Menu" id="menu" role="navigation">
+				<ul>
+					<li><a class="u-show-tiny" href="/">Home</a></li>
+					<li><a href="/blog/">Blog</a></li>
+					<li><a href="/work/">Work</a></li>
+					<li><a href="/about/">About</a></li>
+				</ul>
+				<a class="Menu-toggle with-Menu-icon" id="js-menu-toggle" href="#menu">
+					<span class="Menu-icon">Menu</span>
+				</a>
+			</nav>
 			<a class="Logo" href="/">
 				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 233 167" enable-background="new 0 0 233 167" xml:space="preserve">
 					<g>
@@ -41,15 +52,6 @@
 				</svg>
 				<span>Distracted by Squirrels</span>
 			</a>
-			<a class="Menu-toggle" id="menu-toggle" href="#menu">Menu</a>
-			<nav class="Menu" id="menu" role="navigation">
-				<ul>
-					<li><a class="u-show-tiny" href="/">Home</a></li>
-					<li><a href="/blog/">Blog</a></li>
-					<li><a href="/work/">Work</a></li>
-					<li><a href="/about/">About</a></li>
-				</ul>
-			</nav>
 		</header>
 
 		{{ content }}
