@@ -1,6 +1,6 @@
 // Menu (top drawer)
 // -------------------------
-$menuBackground: #ddd;
+$menuBackground: #eee;
 
 .Menu {
 
@@ -23,10 +23,14 @@ $menuBackground: #ddd;
 
 	li a {
 		display: block;
-
-		padding: em(12);
+		padding: em(12, 20);
 
 		background: $menuBackground;
+
+		color: $bodyColor;
+		font-size: em(20);
+		text-align: center;
+		line-height: 1;
 	}
 }
 
@@ -106,10 +110,12 @@ $menuIconWidth: 100%;
 
 		&:before {
 			@include transform(translateY(0px) rotate(45deg));
+			background: darken($menuIconColor, 20%);
 		}
 
 		&:after {
 			@include transform(translateY(0px) rotate(-45deg));
+			background: darken($menuIconColor, 20%);
 		}
 	}
 }

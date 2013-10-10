@@ -1,4 +1,5 @@
 $headerVerticalSpace: 8;
+$headerHorizontalSpace: 8;
 
 .Header {
 	display: block;
@@ -11,12 +12,12 @@ $headerVerticalSpace: 8;
 
 	> .Logo {
 		margin-top: em($headerVerticalSpace);
-		margin-left: em(8);
+		margin-left: em($headerHorizontalSpace);
 	}
 
 	.Menu-toggle {
 		height: em($tinyLogoHeight + $headerVerticalSpace);
-		margin-right: em(8);
+		margin-right: em($headerHorizontalSpace);
 	}
 
 	.Menu-icon {
