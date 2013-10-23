@@ -6,7 +6,7 @@
 .u-cf:after {
   clear: both; }
 
-@media (min-width: 28.125em) {
+@media (min-width: 37.5625em) {
   .u-show-tiny {
     display: none; } }
 
@@ -558,6 +558,11 @@ a {
 .Logo svg {
   width: 2.5em;
   height: 1.8125em; }
+  @media (min-width: 37.5625em) {
+    .Logo,
+    .Logo svg {
+      width: 4.375em;
+      height: 3.17188em; } }
 
 .Logo {
   display: block;
@@ -573,12 +578,22 @@ a {
   width: 100%;
   padding: 0 0 0.5em;
   font-family: "Montserrat", sans-serif; }
+  @media (min-width: 46.875em) {
+    .Header {
+      width: 96%;
+      border-bottom: 1px solid #f2f2f2; } }
   .Header > .Logo {
     margin-top: 0.5em;
     margin-left: 0.5em; }
+    @media (min-width: 46.875em) {
+      .Header > .Logo {
+        margin: 0; } }
   .Header .Menu-toggle {
     height: 2.3125em;
     margin-right: 0.5em; }
+    @media (min-width: 37.5625em) {
+      .Header .Menu-toggle {
+        height: 3.67188em; } }
   .Header .Menu-icon {
     margin-top: 2px; }
 
@@ -591,8 +606,17 @@ a {
   .js .Menu ul {
     overflow: hidden;
     max-height: 0; }
+    @media (min-width: 46.875em) {
+      .js .Menu ul {
+        max-height: none; } }
+  @media (min-width: 46.875em) {
+    .Menu ul {
+      float: right; } }
 .Menu.js-is-open ul {
   max-height: 13.5625em; }
+@media (min-width: 46.875em) {
+  .Menu li {
+    display: inline-block; } }
 .Menu li a {
   display: block;
   padding: 0.6em;
@@ -601,6 +625,16 @@ a {
   font-size: 1.25em;
   text-align: center;
   line-height: 1; }
+  .Menu li a:hover {
+    color: #2980b9; }
+  @media (min-width: 46.875em) {
+    .Menu li a {
+      background: none; } }
+@media (max-width: 46.8125em) {
+  .Menu li:first-child a {
+    padding-top: 1.2em; }
+  .Menu li:last-child a {
+    padding-bottom: 1.2em; } }
 
 .Menu-toggle {
   float: right;
@@ -611,10 +645,20 @@ a {
   height: 1.8125em;
   padding: 0 0.5em;
   outline: none; }
+  @media (min-width: 37.5625em) {
+    .Menu-toggle {
+      line-height: 3.17188em;
+      height: 3.17188em; } }
+  @media (min-width: 46.875em) {
+    .Menu-toggle {
+      display: none; } }
   .Menu-toggle.with-Menu-icon {
     position: relative;
     width: 1.625em;
     padding: 0; }
+    @media (min-width: 37.5625em) {
+      .Menu-toggle.with-Menu-icon {
+        width: 1.875em; } }
   .js-is-open .Menu-toggle {
     background: #eeeeee; }
 
@@ -649,12 +693,26 @@ a {
     -ms-transform: translateY(-6px);
     -o-transform: translateY(-6px);
     transform: translateY(-6px); }
+    @media (min-width: 37.5625em) {
+      .Menu-icon:before {
+        -webkit-transform: translateY(-7px);
+        -moz-transform: translateY(-7px);
+        -ms-transform: translateY(-7px);
+        -o-transform: translateY(-7px);
+        transform: translateY(-7px); } }
   .Menu-icon:after {
     -webkit-transform: translateY(6px);
     -moz-transform: translateY(6px);
     -ms-transform: translateY(6px);
     -o-transform: translateY(6px);
     transform: translateY(6px); }
+    @media (min-width: 37.5625em) {
+      .Menu-icon:after {
+        -webkit-transform: translateY(7px);
+        -moz-transform: translateY(7px);
+        -ms-transform: translateY(7px);
+        -o-transform: translateY(7px);
+        transform: translateY(7px); } }
   .js-is-open .Menu-icon {
     background: transparent; }
     .js-is-open .Menu-icon:before {

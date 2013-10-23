@@ -35,14 +35,14 @@ $selectionColor:			#ffe58b;
 // Logo
 $logoRatio: 0.725;
 
-$tinyLogoWidth: 40;
-$tinyLogoHeight: $logoRatio * $tinyLogoWidth;
+$baseLogoWidth: 40;
+$baseLogoHeight: $logoRatio * $baseLogoWidth;
 
-$smallLogoWidth: 100;
-$smallLogoHeight: $logoRatio * $smallLogoWidth;
+$tinyLogoWidth: 70;
+$tinyLogoHeight: $logoRatio * $tinyLogoWidth;
 
 
 // Breakpoint (for mixins/breakpoint)
-$breakpointTiny: 			450;
-$breakpointSmall: 			600;
+$breakpointTiny: 			601;
+$breakpointSmall: 			750;
 $breakpointNormal: 			1000;

@@ -10,14 +10,27 @@ $headerHorizontalSpace: 8;
 
 	font-family: $sansFontFamily;
 
+	@include breakpoint(small) {
+		width: 96%;
+		border-bottom: 1px solid #f2f2f2;
+	}
+
 	> .Logo {
 		margin-top: em($headerVerticalSpace);
 		margin-left: em($headerHorizontalSpace);
+
+		@include breakpoint(small) {
+			margin: 0;
+		}
 	}
 
 	.Menu-toggle {
-		height: em($tinyLogoHeight + $headerVerticalSpace);
+		height: em($baseLogoHeight + $headerVerticalSpace);
 		margin-right: em($headerHorizontalSpace);
+
+		@include breakpoint(tiny) {
+			height: em($tinyLogoHeight  + $headerVerticalSpace);
+		}
 	}
 
 	.Menu-icon {

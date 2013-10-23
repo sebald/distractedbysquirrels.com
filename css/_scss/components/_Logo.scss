@@ -1,7 +1,12 @@
 .Logo,
 .Logo svg {
-	width: em($tinyLogoWidth);
-	height: em($tinyLogoHeight);
+	width: em($baseLogoWidth);
+	height: em($baseLogoHeight);
+
+	@include breakpoint(tiny) {
+		width: em($tinyLogoWidth);
+		height: em($tinyLogoHeight);
+	}
 }
 
 .Logo {
