@@ -7,14 +7,6 @@
  *
  */
 (function( window, document ) {
-	// Detect if JavaScript is enabled.
-	document.body.classList.add('js');
-	// Detect if SVG is supported.
-	if( !!((b='createElementNS') in (a=document) && a[b]('http://www.w3.org/2000/svg','svg').createSVGRect) ){
-		document.body.classList.add('svg');
-	}
-
-
 	// Add an eventListener to the window. Fallback for older IE.
 	// -------------------------
 	window.on = function ( el, type, fn ) {
