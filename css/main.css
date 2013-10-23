@@ -571,7 +571,7 @@ a {
 .Logo {
   display: block;
   float: left; }
-  .Logo span {
+  .Logo h1 {
     color: transparent;
     font: 0/0 a;
     text-shadow: none; }
