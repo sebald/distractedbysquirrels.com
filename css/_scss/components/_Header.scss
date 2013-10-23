@@ -1,7 +1,10 @@
 $headerVerticalSpace: 8;
 $headerHorizontalSpace: 8;
 
+$headerAdditionalPaddingTop: 6;
+
 .Header {
+	position: relative;
 	display: block;
 	margin: 0 auto;
 	width: 100%;
@@ -12,6 +15,7 @@ $headerHorizontalSpace: 8;
 
 	@include breakpoint(small) {
 		width: 96%;
+		padding: em(16) 0 em(12 + $headerAdditionalPaddingTop);
 		border-bottom: 1px solid #f2f2f2;
 	}
 
@@ -35,5 +39,12 @@ $headerHorizontalSpace: 8;
 
 	.Menu-icon {
 		margin-top: 2px;
+	}
+
+	.Menu a {
+		@include breakpoint(small) {
+			padding-top: em($headerAdditionalPaddingTop, 20);
+			line-height: em($tinyLogoHeight - $headerAdditionalPaddingTop, 20);
+		}
 	}
 }

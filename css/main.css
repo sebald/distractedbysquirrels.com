@@ -8,7 +8,11 @@
 
 @media (min-width: 37.5625em) {
   .u-show-tiny {
-    display: none; } }
+    display: none !important; } }
+
+@media (min-width: 46.875em) {
+  .u-show-small {
+    display: none !important; } }
 
 /*! normalize.css v1.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
@@ -573,6 +577,7 @@ a {
     text-shadow: none; }
 
 .Header {
+  position: relative;
   display: block;
   margin: 0 auto;
   width: 100%;
@@ -581,6 +586,7 @@ a {
   @media (min-width: 46.875em) {
     .Header {
       width: 96%;
+      padding: 1em 0 1.125em;
       border-bottom: 1px solid #f2f2f2; } }
   .Header > .Logo {
     margin-top: 0.5em;
@@ -596,6 +602,10 @@ a {
         height: 3.67188em; } }
   .Header .Menu-icon {
     margin-top: 2px; }
+  @media (min-width: 46.875em) {
+    .Header .Menu a {
+      padding-top: 0.3em;
+      line-height: 2.2375em; } }
 
 .Menu ul {
   margin: 0;
@@ -603,20 +613,24 @@ a {
   -webkit-transition: max-height 0.3s ease-out;
   -moz-transition: max-height 0.3s ease-out;
   transition: max-height 0.3s ease-out; }
+  @media (min-width: 46.875em) {
+    .Menu ul {
+      float: right;
+      text-align: right; } }
   .js .Menu ul {
     overflow: hidden;
     max-height: 0; }
     @media (min-width: 46.875em) {
       .js .Menu ul {
         max-height: none; } }
-  @media (min-width: 46.875em) {
-    .Menu ul {
-      float: right; } }
 .Menu.js-is-open ul {
   max-height: 13.5625em; }
 @media (min-width: 46.875em) {
   .Menu li {
-    display: inline-block; } }
+    display: inline-block;
+    margin-left: 2.25em; }
+    .Menu li:last-child {
+      margin-right: 0.125em; } }
 .Menu li a {
   display: block;
   padding: 0.6em;
@@ -629,7 +643,8 @@ a {
     color: #2980b9; }
   @media (min-width: 46.875em) {
     .Menu li a {
-      background: none; } }
+      background: none;
+      padding: 0; } }
 @media (max-width: 46.8125em) {
   .Menu li:first-child a {
     padding-top: 1.2em; }

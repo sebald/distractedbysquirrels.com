@@ -3,6 +3,12 @@
 
 .u-show-tiny {
 	@include breakpoint(tiny) {
-		display: none;
+		display: none !important;
+	}
+}
+
+.u-show-small {
+	@include breakpoint(small) {
+		display: none !important;
 	}
 }
