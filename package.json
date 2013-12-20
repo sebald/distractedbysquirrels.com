@@ -1,0 +1,27 @@
+{
+  "name": "distractedbysquirrels.com",
+  "version": "0.0.1",
+  "description": "Personal blog of Sebastian Sebald",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-sass": "~0.6.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-shell": "~0.6.1",
+    "grunt-shell-spawn": "~0.3.0",
+    "grunt-open": "~0.2.2",
+    "grunt-contrib-jshint": "~0.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sebald/distractedbysquirrels.com.git"
+  },
+  "author": "sebastian.sebald@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sebald/distractedbysquirrels.com/issues"
+  },
+  "homepage": "https://github.com/sebald/distractedbysquirrels.com"
+}
