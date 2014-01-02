@@ -16,24 +16,24 @@ module.exports = function ( grunt ) {
 	grunt.initConfig({
 		pkg: grunt.file.readYAML('_config.yml'),
 
-		sass: {
-			dev: {
-				options: {
-					lineNumbers: true
-				},
-				files: {
-					'css/main.css': [ 'css/_scss/main.scss' ]
-				}
-			},
-			release: {
-				options: {
-					style: 'compressed'
-				},
-				files: {
-					'css/main.css': [ 'css/_scss/main.scss' ]
-				}
-			}
-		},
+		// sass: {
+		// 	dev: {
+		// 		options: {
+		// 			lineNumbers: true
+		// 		},
+		// 		files: {
+		// 			'css/main.css': [ 'css/_scss/main.scss' ]
+		// 		}
+		// 	},
+		// 	release: {
+		// 		options: {
+		// 			style: 'compressed'
+		// 		},
+		// 		files: {
+		// 			'css/main.css': [ 'css/_scss/main.scss' ]
+		// 		}
+		// 	}
+		// },
 
 
 		// Server
@@ -45,11 +45,17 @@ module.exports = function ( grunt ) {
 			npm_install: {
 				command: 'npm install'
 			},
-			server: {
+			dev: {
 				options: {
 					async: true
 				},
-				command: 'jekyll serve -w --config _config.yml,_config-dev.yml'
+				command: 'jekyll serve -w --config _config.yml,_config-dev.yml & sass --watch --line-numbers css/_scss/main.scss:css/main.css'
+			},
+			seperate: {
+				options: {
+					async: true
+				},
+				command: 'echo "====== REGENERATE ===="'
 			}
 		},
 		open: {
@@ -66,8 +72,8 @@ module.exports = function ( grunt ) {
 				livereload: 1234
 			},
 			scss: {
-				files: ['css/_scss/**/*.scss'],
-				tasks: ['sass:dev']
+				files: ['_site/*'],
+				tasks: ['shell:seperate']
 			}
 		}
 	});
@@ -75,5 +81,5 @@ module.exports = function ( grunt ) {
 
 	// Tasks
 	// -------------------------
-	grunt.registerTask('default', ['sass:dev', 'shell:server', 'open:server', 'watch']);
+	grunt.registerTask('default', ['shell:dev', 'watch']);
 };
