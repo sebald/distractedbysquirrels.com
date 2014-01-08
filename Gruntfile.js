@@ -49,13 +49,10 @@ module.exports = function ( grunt ) {
 				options: {
 					async: true
 				},
-				command: 'jekyll serve -w --config _config.yml,_config-dev.yml & sass --watch --line-numbers css/_scss/main.scss:css/main.css'
-			},
-			seperate: {
-				options: {
-					async: true
-				},
-				command: 'echo "====== REGENERATE ===="'
+				command: [
+					'jekyll serve -w --config _config.yml,_config-dev.yml',
+					'sass --watch --line-numbers css/_scss/main.scss:css/main.css'
+				].join('&&')
 			}
 		},
 		open: {
@@ -73,7 +70,7 @@ module.exports = function ( grunt ) {
 			},
 			scss: {
 				files: ['_site/*'],
-				tasks: ['shell:seperate']
+				tasks: []
 			}
 		}
 	});
