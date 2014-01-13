@@ -4,7 +4,7 @@ layout: default
 
 <div class="Article">
 	<h2 class="Article-title">{{ page.title }}</h2>
-	<p class="Article-meta">{{ page.date | date_to_string }}</p>
+	<p class="Article-meta">{{ page.date | pretty_date }} &middot; {{ content | reading_time }}</p>
 
 	<div class="Article-content">
 		<p>Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>

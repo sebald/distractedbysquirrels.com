@@ -17,13 +17,13 @@ module PrettyDateFilter
 	# Returns an ordinal number. 13 -> 13th, 21 -> 21st etc.
 	def ordinal(number)
 	  if (11..13).include?(number.to_i % 100)
-	    "#{number}<span>th</span>"
+	    "#{number}<sup>th</sup>"
 	  else
 	    case number.to_i % 10
-	    when 1; "#{number}<span>st</span>"
-	    when 2; "#{number}<span>nd</span>"
-	    when 3; "#{number}<span>rd</span>"
-	    else    "#{number}<span>th</span>"
+	    when 1; "#{number}<sup>st</sup>"
+	    when 2; "#{number}<sup>nd</sup>"
+	    when 3; "#{number}<sup>rd</sup>"
+	    else    "#{number}<sup>th</sup>"
 	    end
 	  end
 	end
