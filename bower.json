@@ -1,0 +1,23 @@
+{
+  "name": "distractedbysquirrels.com",
+  "version": "0.1",
+  "homepage": "https://github.com/sebald/distractedbysquirrels.com",
+  "authors": [
+    "Sebastian Sebald <sebastian.sebald@gmail.com>"
+  ],
+  "description": "Sebastian Sebald's website",
+  "main": "index.html",
+  "keywords": [
+    "blog",
+    "jekyll"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
