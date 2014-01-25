@@ -7,6 +7,8 @@
  *
  */
 (function( window, document ) {
+	'use strict';
+
 	// Add an eventListener to the window. Fallback for older IE.
 	// -------------------------
 	window.on = function ( el, type, fn ) {
