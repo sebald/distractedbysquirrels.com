@@ -1,7 +1,7 @@
 name: Distracted by Squirrels
 markdown: redcarpet
 include: [.htaccess]
-exclude: [Gruntfile.js, node_modules, README.md, LICENSE]
+exclude: [package.json ,Gruntfile.js, bower.json, node_modules, README.md, LICENSE]
 
 permalink: /:categories/:title.html
 
